@@ -13,7 +13,7 @@ from deer.base_classes import Environment
 #import mpl_toolkits.axisartist as AA
 #import matplotlib.pyplot as plt
 import copy 
-import a_star_path_finding as pf
+import algorithms.a_star_path_finding as pf
 
 class MyEnv(Environment):
     VALIDATION_MODE = 0
