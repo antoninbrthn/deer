@@ -22,8 +22,8 @@ class Defaults:
     # ----------------------
     # Experiment Parameters
     # ----------------------
-    STEPS_PER_EPOCH = 2000
-    EPOCHS = 250
+    STEPS_PER_EPOCH = 100 #2000
+    EPOCHS = 10
     STEPS_PER_TEST = 200
     PERIOD_BTW_SUMMARY_PERFS = 1
     
