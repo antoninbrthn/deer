@@ -281,7 +281,12 @@ class NeuralAgent(object):
             for c in self._controllers: c.onEpochEnd(self)
             
         self._environment.end()
-        for c in self._controllers: c.onEnd(self)
+        for c in self._controllers:
+            try:
+                c.onEnd(self)
+            except Exception:
+                print("OnEnd failed on {}".format(c))
+                pass
 
     def _runEpisode(self, maxSteps):
         """

@@ -6,9 +6,10 @@ Author: Vincent Francois-Lavet
 import sys
 import logging
 import numpy as np
-from joblib import hash, dump
+from joblib import hash, dump, load
 import os
-
+import pickle
+import matplotlib.pyplot as plt
 from deer.default_parser import process_args
 from deer.agent import NeuralAgent
 from deer.learning_algos.CRAR_keras import CRAR
@@ -22,7 +23,7 @@ class Defaults:
     # ----------------------
     # Experiment Parameters
     # ----------------------
-    STEPS_PER_EPOCH = 100 #2000
+    STEPS_PER_EPOCH = 200 #2000
     EPOCHS = 10
     STEPS_PER_TEST = 200
     PERIOD_BTW_SUMMARY_PERFS = 1
@@ -49,14 +50,14 @@ class Defaults:
     EPSILON_MIN = 1.0
     EPSILON_DECAY = 10000
     UPDATE_FREQUENCY = 1
-    REPLAY_MEMORY_SIZE = 1000000
+    REPLAY_MEMORY_SIZE = 1000000 #1000000
     BATCH_SIZE = 32
     FREEZE_INTERVAL = 1000
     DETERMINISTIC = False
 
 HIGHER_DIM_OBS = True
 HIGH_INT_DIM = True
-N_SAMPLES=200000
+N_SAMPLES=200000 #200000
 samples_transfer=100
 
 
@@ -88,8 +89,8 @@ if __name__ == "__main__":
         high_int_dim=HIGH_INT_DIM,
         internal_dim=3)
     
-    train_policy = EpsilonGreedyPolicy(learning_algo, env.nActions(), rng, 1.)
-    test_policy = EpsilonGreedyPolicy(learning_algo, env.nActions(), rng, 0.1)
+    train_policy = EpsilonGreedyPolicy(learning_algo, env.nActions(), rng, 1.) # always takes random actions
+    test_policy = EpsilonGreedyPolicy(learning_algo, env.nActions(), rng, 0.1) # random 1/10 times
 
     # --- Instantiate agent ---
     agent = NeuralAgent(
@@ -151,6 +152,8 @@ if __name__ == "__main__":
     old_actions=agent._dataset._actions._data
     old_observations=agent._dataset._observations[0]._data
 
+    #pickle.dump(old_observations, open("dump/old_observations", 'w+'))
+
     # During training epochs, we want to train the agent after every [parameters.update_frequency] action it takes.
     # Plus, we also want to display after each training episode (!= than after every training) the average bellman
     # residual and the average of the V values obtained during the last episode, hence the two last arguments.
@@ -169,10 +172,10 @@ if __name__ == "__main__":
     # structure of the neural network having the best validation score. These dumps can then used to plot the evolution 
     # of the validation and test scores (see below) or simply recover the resulting neural network for your 
     # application.
-    #agent.attach(bc.FindBestController(
-    #    validationID=maze_env.VALIDATION_MODE,
-    #    testID=None,
-    #    unique_fname=fname))
+    agent.attach(bc.FindBestController(
+       validationID=maze_env.VALIDATION_MODE,
+       testID=None,
+       unique_fname=fname))
     
     # All previous controllers control the agent during the epochs it goes through. However, we want to interleave a 
     # "validation epoch" between each training epoch ("one of two epochs", hence the periodicity=2). We do not want 
@@ -182,10 +185,12 @@ if __name__ == "__main__":
     # InterleavedTestEpochController. For each validation epoch, we want also to display the sum of all rewards 
     # obtained, hence the showScore=True. Finally, we want to call the summarizePerformance method of ALE_env every 
     # [parameters.period_btw_summary_perfs] *validation* epochs.
+
+    # Controller_to_disable : all expect the current InterleavedTestEpochController and FindBestController
     agent.attach(bc.InterleavedTestEpochController(
-        id=0, 
+        id=0,
         epoch_length=parameters.steps_per_test,
-        controllers_to_disable=[0, 1, 2, 3, 4, 6, 7, 8],
+        controllers_to_disable=[0, 1, 2, 3, 4, 7, 8, 9],
         periodicity=2,
         show_score=True,
         summarize_every=1))
@@ -193,7 +198,7 @@ if __name__ == "__main__":
     agent.attach(bc.InterleavedTestEpochController(
         id=1, 
         epoch_length=parameters.steps_per_test,
-        controllers_to_disable=[0, 1, 2, 3, 4, 5, 7,8],
+        controllers_to_disable=[0, 1, 2, 3, 4, 6, 8, 9],
         periodicity=2,
         show_score=True,
         summarize_every=1))
@@ -201,7 +206,7 @@ if __name__ == "__main__":
     agent.attach(bc.InterleavedTestEpochController(
         id=2, 
         epoch_length=parameters.steps_per_test,
-        controllers_to_disable=[0, 1, 2, 3, 4, 5, 6,8],
+        controllers_to_disable=[0, 1, 2, 3, 4, 6, 7, 9],
         periodicity=2,
         show_score=True,
         summarize_every=1))
@@ -209,7 +214,7 @@ if __name__ == "__main__":
     agent.attach(bc.InterleavedTestEpochController(
         id=3, 
         epoch_length=parameters.steps_per_test,
-        controllers_to_disable=[0, 1, 2, 3, 4, 5, 6, 7],
+        controllers_to_disable=[0, 1, 2, 3, 4, 6, 7, 8],
         periodicity=2,
         show_score=True,
         summarize_every=1))
@@ -371,7 +376,7 @@ if __name__ == "__main__":
 
     # --- Show results ---
     basename = "scores/" + fname
-    scores = joblib.load(basename + "_scores.jldump")
+    scores = load(basename + "_scores.jldump")
     plt.plot(range(1, len(scores['vs'])+1), scores['vs'], label="VS", color='b')
     plt.legend()
     plt.xlabel("Number of epochs")

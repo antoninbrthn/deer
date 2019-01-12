@@ -337,21 +337,29 @@ class InterleavedTestEpochController(Controller):
         self._summary_counter = 0
 
     def onEpochEnd(self, agent):
+        #print("On EpochEnd of id {}".format(self._id))
         if (self._active == False):
             return
 
         mod = self._epoch_count % self._periodicity
         self._epoch_count += 1
         if mod == 0:
+            #print("Old agent mode: {}".format(agent._mode))
             agent.startMode(self._id, self._epoch_length)
             agent.setControllersActive(self._to_disable, False)
+            #print("New agent mode: {}".format(agent._mode))
         elif mod == 1:
             self._summary_counter += 1
             if self._show_score:
                 score,nbr_episodes=agent.totalRewardOverLastTest()
-                print("Testing score per episode (id: {}) is {} (average over {} episode(s))".format(self._id, score, nbr_episodes))
+                #print("Testing score per episode (id: {}) is {} (average over {} episode(s))".format(self._id, score, nbr_episodes))
             if self._summary_periodicity > 0 and self._summary_counter % self._summary_periodicity == 0:
-                agent.summarizeTestPerformance()
+                try: # In case the agent has id = -1
+                    #print("Agent mode : {}".format(agent._mode))
+                    agent.summarizeTestPerformance()
+                except Exception:
+                    #print("OnEpochEnd failed for {}. Controller id : {}, {}".format(agent, self._id, self))
+                    pass
             agent.resumeTrainingMode()
             agent.setControllersActive(self._to_disable, True)
 
