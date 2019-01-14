@@ -353,6 +353,12 @@ class InterleavedTestEpochController(Controller):
             if self._show_score:
                 score,nbr_episodes=agent.totalRewardOverLastTest()
                 print("Testing score per episode (id: {}) is {} (average over {} episode(s))".format(self._id, score, nbr_episodes))
+
+                # AB: custom scores
+                print("Dumping custom score")
+                with open("custom_scores/scores_{}_rev{}".format(self._id, str(agent._environment._reverse)), "a+") as f:
+                    f.write(str(score)+"\n")
+
             if self._summary_periodicity > 0 and self._summary_counter % self._summary_periodicity == 0:
                 try: # In case the agent has id = -1
                     #print("Agent mode : {}".format(agent._mode))

@@ -4,6 +4,8 @@ Code for the CRAR learning algorithm using Keras
 """
 
 import numpy as np
+import pickle
+import time
 np.set_printoptions(threshold=np.nan)
 from keras.optimizers import SGD,RMSprop
 from keras import backend as K
@@ -574,14 +576,16 @@ class CRAR(LearningAlgo):
         K.set_value(self.full_R.optimizer.lr, self._lr)
         K.set_value(self.full_gamma.optimizer.lr, self._lr)
         K.set_value(self.diff_Tx_x_.optimizer.lr, self._lr)
-        
+
+        # AB : this seems to set the interpr loss lr to 0 ??
         if(self._high_int_dim==False):
-            K.set_value(self.force_features.optimizer.lr, 0)#self._lr)
+            K.set_value(self.force_features.optimizer.lr, self._lr) #0
 
         K.set_value(self.encoder.optimizer.lr, self._lr)
         K.set_value(self.encoder_diff.optimizer.lr, self._lr)
 
-        K.set_value(self.diff_s_s_.optimizer.lr, self._lr/5.) # /5. for simple laby or simple catcher; /1. for distrib of laby
+        # AB : Warning : check lr for laby distrib
+        K.set_value(self.diff_s_s_.optimizer.lr, self._lr/1.) # /5. for simple laby or simple catcher; /1. for distrib of laby
 
     def transfer(self, original, transfer, epochs=1):
         # First, make sure that the target network and the current network are the same
@@ -594,13 +598,21 @@ class CRAR(LearningAlgo):
         x_original=self.encoder.predict(original)#[0]
         print ("x_original[0:10]")
         print (x_original[0:10])
+
+        # AB: pickle those original and encoded states
+        pickle.dump(x_original[0:10], open('dump_states/{}_x'.format(str(int(time.time()))), 'wb+'))
+        pickle.dump(original[0][0:10], open('dump_states/{}_s'.format(str(int(time.time()))), 'wb+'))
+
+        # AB: save time, print less
+        print("Transfer in progress...")
         for i in range(epochs):
             size = original[0].shape[0]
-            print ( "train" )
-            print ( self.encoder.train_on_batch(transfer[0][0:int(size*0.8)] , x_original[0:int(size*0.8)] ) )
-            print ( "validation" )
-            print ( self.encoder.test_on_batch(transfer[0][int(size*0.8):] , x_original[int(size*0.8):]) )
-         
+            #print ( "train" )
+            #print ( self.encoder.train_on_batch(transfer[0][0:int(size*0.8)] , x_original[0:int(size*0.8)] ) )
+            #print ( "validation" )
+            #print ( self.encoder.test_on_batch(transfer[0][int(size*0.8):] , x_original[int(size*0.8):]) )
+        print("Transfer completed.")
+
         self.encoder.compile(optimizer=optimizer4,
                   loss=mean_squared_error_p)
 

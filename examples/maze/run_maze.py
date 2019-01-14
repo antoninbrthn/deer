@@ -23,8 +23,8 @@ class Defaults:
     # ----------------------
     # Experiment Parameters
     # ----------------------
-    STEPS_PER_EPOCH = 2000 #2000
-    EPOCHS = 5
+    STEPS_PER_EPOCH = 1000 #2000
+    EPOCHS = 10
     STEPS_PER_TEST = 200  #200
     PERIOD_BTW_SUMMARY_PERFS = 1
     
@@ -50,14 +50,14 @@ class Defaults:
     EPSILON_MIN = 1.0
     EPSILON_DECAY = 10000
     UPDATE_FREQUENCY = 1
-    REPLAY_MEMORY_SIZE = 1000000 #1000000
+    REPLAY_MEMORY_SIZE = 100000 #1000000
     BATCH_SIZE = 32
     FREEZE_INTERVAL = 1000
     DETERMINISTIC = True
 
 HIGHER_DIM_OBS = True
 HIGH_INT_DIM = True
-N_SAMPLES=200000 #200000
+N_SAMPLES=20000 #200000
 samples_transfer=100
 
 
@@ -152,7 +152,8 @@ if __name__ == "__main__":
     old_actions=agent._dataset._actions._data
     old_observations=agent._dataset._observations[0]._data
 
-    #pickle.dump(old_observations, open("dump/old_observations", 'w+'))
+    # old_observations is way too massive to be saved
+    #pickle.dump(old_observations[0:3], open("dump/old_observations_h", 'wb+'))
 
     # During training epochs, we want to train the agent after every [parameters.update_frequency] action it takes.
     # Plus, we also want to display after each training episode (!= than after every training) the average bellman
@@ -172,10 +173,10 @@ if __name__ == "__main__":
     # structure of the neural network having the best validation score. These dumps can then used to plot the evolution
     # of the validation and test scores (see below) or simply recover the resulting neural network for your
     # application.
-    agent.attach(bc.FindBestController(
-       validationID=maze_env.VALIDATION_MODE,
-       testID=None,
-       unique_fname=fname))
+    # agent.attach(bc.FindBestController(
+    #    validationID=maze_env.VALIDATION_MODE,
+    #    testID=None,
+    #    unique_fname=fname))
 
     # All previous controllers control the agent during the epochs it goes through. However, we want to interleave a
     # "validation epoch" between each training epoch ("one of two epochs", hence the periodicity=2). We do not want
@@ -190,34 +191,35 @@ if __name__ == "__main__":
     agent.attach(bc.InterleavedTestEpochController(
         id=0,
         epoch_length=parameters.steps_per_test,
-        controllers_to_disable=[0, 1, 2, 3, 4, 7, 8, 9],
+        controllers_to_disable=[0, 1, 2, 3, 4], #, 6, 7, 8],
         periodicity=2,
         show_score=True,
         summarize_every=1))
 
-    agent.attach(bc.InterleavedTestEpochController(
-        id=1,
-        epoch_length=parameters.steps_per_test,
-        controllers_to_disable=[0, 1, 2, 3, 4, 6, 8, 9],
-        periodicity=2,
-        show_score=True,
-        summarize_every=1))
-
-    agent.attach(bc.InterleavedTestEpochController(
-        id=2,
-        epoch_length=parameters.steps_per_test,
-        controllers_to_disable=[0, 1, 2, 3, 4, 6, 7, 9],
-        periodicity=2,
-        show_score=True,
-        summarize_every=1))
-
-    agent.attach(bc.InterleavedTestEpochController(
-        id=3,
-        epoch_length=parameters.steps_per_test,
-        controllers_to_disable=[0, 1, 2, 3, 4, 6, 7, 8],
-        periodicity=2,
-        show_score=True,
-        summarize_every=1))
+    # AB : accelerate running time
+    # agent.attach(bc.InterleavedTestEpochController(
+    #     id=1,
+    #     epoch_length=parameters.steps_per_test,
+    #     controllers_to_disable=[0, 1, 2, 3, 4, 5, 7, 8],
+    #     periodicity=2,
+    #     show_score=True,
+    #     summarize_every=1))
+    #
+    # agent.attach(bc.InterleavedTestEpochController(
+    #     id=2,
+    #     epoch_length=parameters.steps_per_test,
+    #     controllers_to_disable=[0, 1, 2, 3, 4, 5, 6, 8],
+    #     periodicity=2,
+    #     show_score=True,
+    #     summarize_every=1))
+    #
+    # agent.attach(bc.InterleavedTestEpochController(
+    #     id=3,
+    #     epoch_length=parameters.steps_per_test,
+    #     controllers_to_disable=[0, 1, 2, 3, 4, 5, 6, 7],
+    #     periodicity=2,
+    #     show_score=True,
+    #     summarize_every=1))
 
     # --- Run the experiment ---
     try:
@@ -234,39 +236,48 @@ if __name__ == "__main__":
    ###
     optimized_params=learning_algo.getAllParams()
     print ("optimized_params")
-    print (optimized_params)
-    pickle.dump(optimized_params, open("dump/optimized_params", 'wb+'))
+    #print (optimized_params)
+    pickle.dump(optimized_params, open("dump/optimized_params_"+fname, 'wb+'))
 
    # --- Instantiate learning_algo ---
-#    learning_algo = CRAR(
-#        env,
-#        parameters.rms_decay,
-#        parameters.rms_epsilon,
-#        parameters.momentum,
-#        parameters.clip_delta,
-#        parameters.freeze_interval,
-#        parameters.batch_size,
-#        parameters.update_rule,
-#        rng,
-#        double_Q=True,
-#        high_int_dim=HIGH_INT_DIM,
-#        internal_dim=3)
-#    learning_algo.setAllParams(optimized_params)
+    # AB : might not need to plain copy the parameters from the previous agent, only transfer the encoder function
+    # learning_algo = CRAR(
+    #    env,
+    #    parameters.rms_decay,
+    #    parameters.rms_epsilon,
+    #    parameters.momentum,
+    #    parameters.clip_norm,
+    #    parameters.freeze_interval,
+    #    parameters.batch_size,
+    #    parameters.update_rule,
+    #    rng,
+    #    double_Q=True,
+    #    high_int_dim=HIGH_INT_DIM,
+    #    internal_dim=3)
+    # learning_algo.setAllParams(optimized_params)
 
-    rand_ind=np.random.random_integers(0,20000,samples_transfer)
+    rand_ind=np.random.random_integers(0,1000,samples_transfer)
     original=[np.array([[agent._dataset._observations[o]._data[rand_ind[n]+l] for l in range(1)] for n in range(samples_transfer)]) for o in range(1)]
     transfer=[np.array([[-agent._dataset._observations[o]._data[rand_ind[n]+l] for l in range(1)] for n in range(samples_transfer)]) for o in range(1)]
+
+    # AB : now a random noise on each obs
+    #transfer_noise=
+
     print ("original[0][0:10], transfer[0][0:10]")
     print (original[0][0:10], transfer[0][0:10])
     pickle.dump(original[0][0:10], open("dump/original_obs", 'wb+'))
-    pickle.dump(transfer[0][0:10], open("dump/original_obs", 'wb+'))
+    pickle.dump(transfer[0][0:10], open("dump/transfer_obs", 'wb+'))
 
+    ## Transfer the learning : force the encoder to remain the same
     # Transfer between the two repr
-    #learning_algo.transfer(original, transfer, 5000000/samples_transfer)
+    learning_algo.transfer(original, transfer, 100000//samples_transfer) #5000000/samples_transfer)
 
 
    # --- Re instantiate environment with reverse=True ---
     env = maze_env(rng, higher_dim_obs=HIGHER_DIM_OBS, reverse=True)
+
+    # AB: will need to implement a "noise" method in env
+
     # --- Re instantiate agent ---
     agent = NeuralAgent(
         env,
@@ -310,6 +321,7 @@ if __name__ == "__main__":
         periodicity=1,
         reset_every='none'))
 
+    ## AB : initiatialize the agent dataset
     agent.run(1, N_SAMPLES)
     #print (agent._dataset._rewards._data[0:500])
     #print (agent._dataset._terminals._data[0:500])
@@ -319,6 +331,7 @@ if __name__ == "__main__":
     agent._dataset._terminals._data=old_terminals
     agent._dataset._actions._data=old_actions
     agent._dataset._observations[0]._data=-old_observations
+    # AB : Change to old_observations + noise, maybe the same as for transfer_noise ?
 
     # During training epochs, we want to train the agent after every [parameters.update_frequency] action it takes.
     # Plus, we also want to display after each training episode (!= than after every training) the average bellman
@@ -376,11 +389,11 @@ if __name__ == "__main__":
 
 
     # --- Show results ---
-    basename = "scores/" + fname
-    scores = load(basename + "_scores.jldump")
-    plt.plot(range(1, len(scores['vs'])+1), scores['vs'], label="VS", color='b')
-    plt.legend()
-    plt.xlabel("Number of epochs")
-    plt.ylabel("Score")
-    plt.savefig(basename + "_scores.pdf")
-    plt.show()
+    # basename = "scores/" + fname
+    # scores = load(basename + "_scores.jldump")
+    # plt.plot(range(1, len(scores['vs'])+1), scores['vs'], label="VS", color='b')
+    # plt.legend()
+    # plt.xlabel("Number of epochs")
+    # plt.ylabel("Score")
+    # plt.savefig(basename + "_scores.pdf")
+    # plt.show()
