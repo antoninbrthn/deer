@@ -24,7 +24,7 @@ class Defaults:
     # Experiment Parameters
     # ----------------------
     STEPS_PER_EPOCH = 1000 #2000
-    EPOCHS = 10
+    EPOCHS = 2 
     STEPS_PER_TEST = 200  #200
     PERIOD_BTW_SUMMARY_PERFS = 1
     
@@ -189,7 +189,7 @@ if __name__ == "__main__":
 
     # Controller_to_disable : all expect the current InterleavedTestEpochController and FindBestController
     agent.attach(bc.InterleavedTestEpochController(
-        id=0,
+        id=3,
         epoch_length=parameters.steps_per_test,
         controllers_to_disable=[0, 1, 2, 3, 4], #, 6, 7, 8],
         periodicity=2,
