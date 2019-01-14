@@ -226,8 +226,8 @@ class CRAR(LearningAlgo):
                 print (np.transpose(Es, (0, 3, 1, 2))[0],np.transpose(ETs, (0, 3, 1, 2))[0],np.transpose(Es_, (0, 3, 1, 2))[0])    # data_format='channels_last' --> 'channels_first'
             else:
                 print (Es[0],ETs[0],Es_[0])
-            pickle.dump(states_val[0], open("dump_states/encoder/s_{}_{}".format(str(run_index ), str(self.update_counter))))
-            pickle.dump(Es[0], open("dump_states/encoder/Es_{}_{}".format(str(run_index), str(self.update_counter))))
+            pickle.dump(states_val[0], open("dump_states/encoder/s_{}_{}".format(str(run_index ), str(self.update_counter)), 'wb+'))
+            pickle.dump(Es[0], open("dump_states/encoder/Es_{}_{}".format(str(run_index), str(self.update_counter)), "wb+"))
             print ("R[0]")
             print (R[0])
             
@@ -417,8 +417,8 @@ class CRAR(LearningAlgo):
             QD_plan+=Qd
         QD_plan=QD_plan/(d+1)
         
-        #print ("QD_plan")
-        #print (QD_plan)
+        print ("QD_plan")
+        print (QD_plan)
 
         return QD_plan
   
