@@ -18,12 +18,14 @@ import deer.experiment.base_controllers as bc
 
 from deer.policies import EpsilonGreedyPolicy
 
+global run_id
+run_id = np.random.randint(1, 10000, 1)[0]
 
 class Defaults:
     # ----------------------
     # Experiment Parameters
     # ----------------------
-    STEPS_PER_EPOCH = 1000 #2000
+    STEPS_PER_EPOCH = 100 #2000
     EPOCHS = 10
     STEPS_PER_TEST = 200  #200
     PERIOD_BTW_SUMMARY_PERFS = 1
@@ -50,14 +52,14 @@ class Defaults:
     EPSILON_MIN = 1.0
     EPSILON_DECAY = 10000
     UPDATE_FREQUENCY = 1
-    REPLAY_MEMORY_SIZE = 100000 #1000000
+    REPLAY_MEMORY_SIZE = 1000 #1000000
     BATCH_SIZE = 32
     FREEZE_INTERVAL = 1000
     DETERMINISTIC = True
 
 HIGHER_DIM_OBS = True
 HIGH_INT_DIM = True
-N_SAMPLES=20000 #200000
+N_SAMPLES=200 #200000
 samples_transfer=100
 
 
