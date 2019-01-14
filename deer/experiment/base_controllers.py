@@ -11,6 +11,7 @@ an episode ends.
 import numpy as np
 import joblib
 import os
+import time
 
 class Controller(object):
     """A base controller that does nothing when receiving the various signals emitted by an agent. This class should 
@@ -356,7 +357,7 @@ class InterleavedTestEpochController(Controller):
 
                 # AB: custom scores
                 print("Dumping custom score")
-                with open("custom_scores/scores_{}_rev{}".format(agent.run_id, str(agent._environment._reverse)), "a+") as f:
+                with open("custom_scores/scores_{}_rev{}".format(str(int(time.time()/10)), str(agent._environment._reverse)), "a+") as f:
                     f.write(str(score)+"\n")
 
             if self._summary_periodicity > 0 and self._summary_counter % self._summary_periodicity == 0:

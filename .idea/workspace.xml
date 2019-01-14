@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="2dad6902-cb35-44bc-b672-87ab4ddcee9d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/deer/experiment/base_controllers.py" beforeDir="false" afterPath="$PROJECT_DIR$/deer/experiment/base_controllers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deer/learning_algos/CRAR_keras.py" beforeDir="false" afterPath="$PROJECT_DIR$/deer/learning_algos/CRAR_keras.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/maze/run_maze.py" beforeDir="false" afterPath="$PROJECT_DIR$/examples/maze/run_maze.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -11,7 +13,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/deer$run_maze.coverage" NAME="run_maze Coverage Results" MODIFIED="1547462077021" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/examples/maze" />
+    <SUITE FILE_PATH="coverage/deer$run_maze.coverage" NAME="run_maze Coverage Results" MODIFIED="1547480349000" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/examples/maze" />
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="858678558">
@@ -33,14 +35,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="2514" />
+          <entry key="py" value="2582" />
           <entry key="txt" value="19" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="19" />
-          <entry key="Python" value="2514" />
+          <entry key="Python" value="2582" />
         </counts>
       </usages-collector>
     </session>
@@ -50,8 +52,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/deer/learning_algos/CRAR_keras.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="83">
-              <caret line="94" column="25" lean-forward="true" selection-start-line="94" selection-start-column="25" selection-end-line="94" selection-end-column="25" />
+            <state relative-caret-position="1024">
+              <caret line="232" column="12" lean-forward="true" selection-start-line="232" selection-start-column="12" selection-end-line="232" selection-end-column="12" />
               <folding>
                 <element signature="e#0#57#1" expanded="true" />
                 <element signature="e#59#77#0" expanded="true" />
@@ -83,11 +85,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/examples/maze/run_maze.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="361" column="43" lean-forward="true" selection-start-line="361" selection-start-column="43" selection-end-line="361" selection-end-column="43" />
+            <state relative-caret-position="130">
+              <caret line="61" column="11" selection-start-line="61" selection-start-column="11" selection-end-line="61" selection-end-column="11" />
               <folding>
                 <element signature="e#0#52#1" expanded="true" />
                 <element signature="e#54#101#0" expanded="true" />
@@ -100,7 +102,7 @@
         <entry file="file://$PROJECT_DIR$/deer/agent.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="286">
-              <caret line="197" column="36" lean-forward="true" selection-start-line="197" selection-start-column="36" selection-end-line="197" selection-end-column="36" />
+              <caret line="197" column="36" selection-start-line="197" selection-start-column="36" selection-end-line="197" selection-end-column="36" />
               <folding>
                 <element signature="e#224#233#0" expanded="true" />
               </folding>
@@ -109,34 +111,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/examples/test_CRAR/run_catcher.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="413">
-              <caret line="56" column="21" lean-forward="true" selection-start-line="56" selection-start-column="21" selection-end-line="56" selection-end-column="21" />
-              <folding>
-                <element signature="e#0#25#1" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/examples/test_CRAR/catcher_env.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="89" column="23" selection-start-line="89" selection-start-column="23" selection-end-line="89" selection-end-column="23" />
-              <folding>
-                <element signature="e#0#47#1" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/deer/experiment/base_controllers.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="298">
-              <caret line="355" lean-forward="true" selection-start-line="355" selection-end-line="355" />
+            <state relative-caret-position="189">
+              <caret line="359" column="16" selection-start-line="359" selection-start-column="16" selection-end-line="359" selection-end-column="65" />
               <folding>
                 <element signature="e#600#618#0" expanded="true" />
                 <element signature="e#2562#2835#1" expanded="true" />
@@ -164,9 +142,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>score</find>
-      <find>scores</find>
-      <find>_testScores</find>
       <find>MyEnv</find>
       <find>reverse</find>
       <find>x_original</find>
@@ -187,13 +162,16 @@
       <find>_mode ==</find>
       <find>_id =</find>
       <find>_id</find>
-      <find>discount</find>
       <find>New</find>
       <find>validation_</find>
       <find>pickle.dump</find>
       <find>reve</find>
       <find>pickle.d</find>
       <find>rev</find>
+      <find>discount</find>
+      <find>agen</find>
+      <find>run_id</find>
+      <find>run_i</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -203,9 +181,9 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/deer/agent.py" />
-        <option value="$PROJECT_DIR$/examples/maze/run_maze.py" />
-        <option value="$PROJECT_DIR$/deer/learning_algos/CRAR_keras.py" />
         <option value="$PROJECT_DIR$/deer/experiment/base_controllers.py" />
+        <option value="$PROJECT_DIR$/deer/learning_algos/CRAR_keras.py" />
+        <option value="$PROJECT_DIR$/examples/maze/run_maze.py" />
       </list>
     </option>
   </component>
@@ -371,7 +349,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.14878398" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.14878398" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Database Changes" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="1" />
@@ -381,7 +359,7 @@
       <window_info anchor="bottom" id="Docker" order="5" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="6" />
       <window_info anchor="bottom" id="Find" order="7" weight="0.3290653" />
-      <window_info anchor="bottom" id="Run" order="8" sideWeight="0.49928468" visible="true" weight="0.50963855" />
+      <window_info active="true" anchor="bottom" id="Run" order="8" sideWeight="0.49928468" visible="true" weight="0.50963855" />
       <window_info anchor="bottom" id="Debug" order="9" sideWeight="0.49928468" weight="0.3554217" />
       <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
@@ -701,43 +679,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/examples/test_CRAR/catcher_env.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="89" column="23" selection-start-line="89" selection-start-column="23" selection-end-line="89" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#47#1" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examples/test_CRAR/run_catcher.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="413">
-          <caret line="56" column="21" lean-forward="true" selection-start-line="56" selection-start-column="21" selection-end-line="56" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#25#1" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examples/maze/maze_env.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="98">
-          <caret line="7" column="41" selection-start-line="7" selection-start-column="41" selection-end-line="7" selection-end-column="41" />
-          <folding>
-            <element signature="e#0#75#1" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/deer/base_classes/learning_algo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="73" column="11" selection-start-line="73" selection-start-column="11" selection-end-line="73" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/deer/learning_algos/NN_CRAR_keras.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="137">
@@ -751,21 +692,68 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/examples/maze/run_maze.py">
+    <entry file="file://$PROJECT_DIR$/examples/test_CRAR/run_catcher.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="361" column="43" lean-forward="true" selection-start-line="361" selection-start-column="43" selection-end-line="361" selection-end-column="43" />
+        <state relative-caret-position="413">
+          <caret line="56" column="21" selection-start-line="56" selection-start-column="21" selection-end-line="56" selection-end-column="21" />
           <folding>
-            <element signature="e#0#52#1" expanded="true" />
-            <element signature="e#54#101#0" expanded="true" />
+            <element signature="e#0#25#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/test_CRAR/catcher_env.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="89" column="23" selection-start-line="89" selection-start-column="23" selection-end-line="89" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#47#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/deer/agent.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="197" column="36" selection-start-line="197" selection-start-column="36" selection-end-line="197" selection-end-column="36" />
+          <folding>
+            <element signature="e#224#233#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/deer/base_classes/learning_algo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="73" column="11" selection-start-line="73" selection-start-column="11" selection-end-line="73" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/maze/maze_env.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="98">
+          <caret line="7" column="41" selection-start-line="7" selection-start-column="41" selection-end-line="7" selection-end-column="41" />
+          <folding>
+            <element signature="e#0#75#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/deer/experiment/base_controllers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="359" column="16" selection-start-line="359" selection-start-column="16" selection-end-line="359" selection-end-column="65" />
+          <folding>
+            <element signature="e#600#618#0" expanded="true" />
+            <element signature="e#2562#2835#1" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/deer/learning_algos/CRAR_keras.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="83">
-          <caret line="94" column="25" lean-forward="true" selection-start-line="94" selection-start-column="25" selection-end-line="94" selection-end-column="25" />
+        <state relative-caret-position="1024">
+          <caret line="232" column="12" lean-forward="true" selection-start-line="232" selection-start-column="12" selection-end-line="232" selection-end-column="12" />
           <folding>
             <element signature="e#0#57#1" expanded="true" />
             <element signature="e#59#77#0" expanded="true" />
@@ -775,23 +763,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/deer/agent.py">
+    <entry file="file://$PROJECT_DIR$/examples/maze/run_maze.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="197" column="36" lean-forward="true" selection-start-line="197" selection-start-column="36" selection-end-line="197" selection-end-column="36" />
+        <state relative-caret-position="130">
+          <caret line="61" column="11" selection-start-line="61" selection-start-column="11" selection-end-line="61" selection-end-column="11" />
           <folding>
-            <element signature="e#224#233#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/deer/experiment/base_controllers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="355" lean-forward="true" selection-start-line="355" selection-end-line="355" />
-          <folding>
-            <element signature="e#600#618#0" expanded="true" />
-            <element signature="e#2562#2835#1" expanded="true" />
+            <element signature="e#0#52#1" expanded="true" />
+            <element signature="e#54#101#0" expanded="true" />
           </folding>
         </state>
       </provider>
