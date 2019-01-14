@@ -352,7 +352,7 @@ class InterleavedTestEpochController(Controller):
             self._summary_counter += 1
             if self._show_score:
                 score,nbr_episodes=agent.totalRewardOverLastTest()
-                #print("Testing score per episode (id: {}) is {} (average over {} episode(s))".format(self._id, score, nbr_episodes))
+                print("Testing score per episode (id: {}) is {} (average over {} episode(s))".format(self._id, score, nbr_episodes))
             if self._summary_periodicity > 0 and self._summary_counter % self._summary_periodicity == 0:
                 try: # In case the agent has id = -1
                     #print("Agent mode : {}".format(agent._mode))

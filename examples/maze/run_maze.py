@@ -3,6 +3,7 @@
 Author: Vincent Francois-Lavet
 """
 
+from deer.learning_algos.CRAR_keras import CRAR
 import sys
 import logging
 import numpy as np
@@ -12,7 +13,6 @@ import pickle
 import matplotlib.pyplot as plt
 from deer.default_parser import process_args
 from deer.agent import NeuralAgent
-from deer.learning_algos.CRAR_keras import CRAR
 from maze_env import MyEnv as maze_env
 import deer.experiment.base_controllers as bc
 
@@ -23,7 +23,7 @@ class Defaults:
     # ----------------------
     # Experiment Parameters
     # ----------------------
-    STEPS_PER_EPOCH = 200 #2000
+    STEPS_PER_EPOCH = 2000 #2000
     EPOCHS = 10
     STEPS_PER_TEST = 200
     PERIOD_BTW_SUMMARY_PERFS = 1

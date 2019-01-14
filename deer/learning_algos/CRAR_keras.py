@@ -250,12 +250,12 @@ class CRAR(LearningAlgo):
         if(self._high_int_dim==False):
             target_modif_features=np.zeros((self._n_actions,self._internal_dim))
             ## Catcher
-            #target_modif_features[0,0]=1    # dir
-            #target_modif_features[1,0]=-1   # opposite dir
-            #target_modif_features[0:2,1]=1    # temps
+            target_modif_features[0,0]=1    # dir
+            target_modif_features[1,0]=-1   # opposite dir
+            target_modif_features[0:2,1]=1    # temps
             ## Laby
-            target_modif_features[0,0]=1
-            target_modif_features[1,0]=0
+            #target_modif_features[0,0]=1
+            #target_modif_features[1,0]=0
             #target_modif_features[2,1]=0
             #target_modif_features[3,1]=0
             target_modif_features=np.repeat(target_modif_features,self._batch_size,axis=0)
@@ -576,7 +576,7 @@ class CRAR(LearningAlgo):
         K.set_value(self.diff_Tx_x_.optimizer.lr, self._lr)
         
         if(self._high_int_dim==False):
-            K.set_value(self.force_features.optimizer.lr, 0)#self._lr)
+            K.set_value(self.force_features.optimizer.lr, self._lr) #0
 
         K.set_value(self.encoder.optimizer.lr, self._lr)
         K.set_value(self.encoder_diff.optimizer.lr, self._lr)
