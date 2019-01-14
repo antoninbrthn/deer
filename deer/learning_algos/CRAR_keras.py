@@ -199,7 +199,8 @@ class CRAR(LearningAlgo):
         Average loss of the batch training for the Q-values (RMSE)
         Individual (square) losses for the Q-values for each tuple
         """
-        
+        run_index = np.random.randint(1, 10000, 1)[0]
+
         onehot_actions = np.zeros((self._batch_size, self._n_actions))
         onehot_actions[np.arange(self._batch_size), actions_val] = 1
         onehot_actions_rand = np.zeros((self._batch_size, self._n_actions))
@@ -225,6 +226,8 @@ class CRAR(LearningAlgo):
                 print (np.transpose(Es, (0, 3, 1, 2))[0],np.transpose(ETs, (0, 3, 1, 2))[0],np.transpose(Es_, (0, 3, 1, 2))[0])    # data_format='channels_last' --> 'channels_first'
             else:
                 print (Es[0],ETs[0],Es_[0])
+            pickle.dump(states_val[0], open("dump_states/encoder/s_{}_{}".format(str(run_index ), str(self.update_counter))))
+            pickle.dump(Es[0], open("dump_states/encoder/Es_{}_{}".format(str(run_index), str(self.update_counter))))
             print ("R[0]")
             print (R[0])
             
