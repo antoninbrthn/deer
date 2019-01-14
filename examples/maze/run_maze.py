@@ -351,7 +351,7 @@ if __name__ == "__main__":
     # obtained, hence the showScore=True. Finally, we want to call the summarizePerformance method of ALE_env every
     # [parameters.period_btw_summary_perfs] *validation* epochs.
     agent.attach(bc.InterleavedTestEpochController(
-        id=maze_env.VALIDATION_MODE,
+        id=3, #maze_env.VALIDATION_MODE,
         epoch_length=parameters.steps_per_test,
         controllers_to_disable=[0, 1, 2, 3, 4],
         periodicity=2,
