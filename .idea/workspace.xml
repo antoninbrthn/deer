@@ -2,8 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2dad6902-cb35-44bc-b672-87ab4ddcee9d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/examples/maze/custom_scores/scores_154748049_revFalse" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examples/maze/custom_scores/scores_154748054_revFalse" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examples/maze/custom_scores/scores_154748061_revFalse" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examples/maze/custom_scores/scores_154748067_revFalse" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examples/maze/custom_scores/scores_154748073_revFalse" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examples/maze/custom_scores/scores_154748079_revFalse" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examples/maze/custom_scores/scores_154748085_revFalse" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examples/maze/custom_scores/scores_154748092_revFalse" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examples/maze/dump_states/encoder/Es_154748067_500" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examples/maze/dump_states/encoder/s_154748067_500" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/deer/experiment/base_controllers.py" beforeDir="false" afterPath="$PROJECT_DIR$/deer/experiment/base_controllers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deer/learning_algos/CRAR_keras.py" beforeDir="false" afterPath="$PROJECT_DIR$/deer/learning_algos/CRAR_keras.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/maze/dump/original_obs" beforeDir="false" afterPath="$PROJECT_DIR$/examples/maze/dump/original_obs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/maze/dump/transfer_obs" beforeDir="false" afterPath="$PROJECT_DIR$/examples/maze/dump/transfer_obs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/examples/maze/run_maze.py" beforeDir="false" afterPath="$PROJECT_DIR$/examples/maze/run_maze.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -35,14 +47,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="2582" />
+          <entry key="py" value="2585" />
           <entry key="txt" value="19" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="19" />
-          <entry key="Python" value="2582" />
+          <entry key="Python" value="2585" />
         </counts>
       </usages-collector>
     </session>
@@ -53,7 +65,7 @@
         <entry file="file://$PROJECT_DIR$/deer/learning_algos/CRAR_keras.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1024">
-              <caret line="232" column="12" lean-forward="true" selection-start-line="232" selection-start-column="12" selection-end-line="232" selection-end-column="12" />
+              <caret line="232" column="12" selection-start-line="232" selection-start-column="12" selection-end-line="232" selection-end-column="12" />
               <folding>
                 <element signature="e#0#57#1" expanded="true" />
                 <element signature="e#59#77#0" expanded="true" />
@@ -85,11 +97,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/examples/maze/run_maze.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="130">
-              <caret line="61" column="11" selection-start-line="61" selection-start-column="11" selection-end-line="61" selection-end-column="11" />
+            <state relative-caret-position="227">
+              <caret line="38" column="28" selection-start-line="38" selection-start-column="28" selection-end-line="38" selection-end-column="28" />
               <folding>
                 <element signature="e#0#52#1" expanded="true" />
                 <element signature="e#54#101#0" expanded="true" />
@@ -110,11 +122,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/deer/experiment/base_controllers.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="359" column="16" selection-start-line="359" selection-start-column="16" selection-end-line="359" selection-end-column="65" />
+            <state relative-caret-position="134">
+              <caret line="360" column="44" lean-forward="true" selection-start-line="360" selection-start-column="44" selection-end-line="360" selection-end-column="44" />
               <folding>
                 <element signature="e#600#618#0" expanded="true" />
                 <element signature="e#2562#2835#1" expanded="true" />
@@ -142,8 +154,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>MyEnv</find>
-      <find>reverse</find>
       <find>x_original</find>
       <find>dumpin</find>
       <find>diff_s_</find>
@@ -169,9 +179,11 @@
       <find>pickle.d</find>
       <find>rev</find>
       <find>discount</find>
-      <find>agen</find>
       <find>run_id</find>
       <find>run_i</find>
+      <find>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</find>
+      <find>agen</find>
+      <find>me.tim</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -181,9 +193,9 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/deer/agent.py" />
-        <option value="$PROJECT_DIR$/deer/experiment/base_controllers.py" />
         <option value="$PROJECT_DIR$/deer/learning_algos/CRAR_keras.py" />
         <option value="$PROJECT_DIR$/examples/maze/run_maze.py" />
+        <option value="$PROJECT_DIR$/deer/experiment/base_controllers.py" />
       </list>
     </option>
   </component>
@@ -739,21 +751,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/deer/experiment/base_controllers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="359" column="16" selection-start-line="359" selection-start-column="16" selection-end-line="359" selection-end-column="65" />
-          <folding>
-            <element signature="e#600#618#0" expanded="true" />
-            <element signature="e#2562#2835#1" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/deer/learning_algos/CRAR_keras.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1024">
-          <caret line="232" column="12" lean-forward="true" selection-start-line="232" selection-start-column="12" selection-end-line="232" selection-end-column="12" />
+          <caret line="232" column="12" selection-start-line="232" selection-start-column="12" selection-end-line="232" selection-end-column="12" />
           <folding>
             <element signature="e#0#57#1" expanded="true" />
             <element signature="e#59#77#0" expanded="true" />
@@ -765,11 +766,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/examples/maze/run_maze.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="61" column="11" selection-start-line="61" selection-start-column="11" selection-end-line="61" selection-end-column="11" />
+        <state relative-caret-position="227">
+          <caret line="38" column="28" selection-start-line="38" selection-start-column="28" selection-end-line="38" selection-end-column="28" />
           <folding>
             <element signature="e#0#52#1" expanded="true" />
             <element signature="e#54#101#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/deer/experiment/base_controllers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="360" column="44" lean-forward="true" selection-start-line="360" selection-start-column="44" selection-end-line="360" selection-end-column="44" />
+          <folding>
+            <element signature="e#600#618#0" expanded="true" />
+            <element signature="e#2562#2835#1" expanded="true" />
           </folding>
         </state>
       </provider>
