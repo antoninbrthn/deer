@@ -93,7 +93,10 @@ class CRAR(LearningAlgo):
         self.loss_disambiguate1=0
         self.loss_disambiguate2=0
         self.loss_gamma=0
-        
+
+        # Random id for dumping parameters
+        self.run_id = np.random.randint(1, 10000, 1)[0]
+
         self.learn_and_plan = neural_network(self._batch_size, self._input_dimensions, self._n_actions, self._random_state, high_int_dim=self._high_int_dim, internal_dim=self._internal_dim)
 
         self.encoder = self.learn_and_plan.encoder_model()
@@ -226,8 +229,8 @@ class CRAR(LearningAlgo):
                 print (np.transpose(Es, (0, 3, 1, 2))[0],np.transpose(ETs, (0, 3, 1, 2))[0],np.transpose(Es_, (0, 3, 1, 2))[0])    # data_format='channels_last' --> 'channels_first'
             else:
                 print (Es[0],ETs[0],Es_[0])
-            pickle.dump(states_val[0], open("dump_states/encoder/s_{}_{}".format(str(run_index ), str(self.update_counter)), 'wb+'))
-            pickle.dump(Es[0], open("dump_states/encoder/Es_{}_{}".format(str(run_index), str(self.update_counter)), "wb+"))
+            pickle.dump(states_val[0], open("dump_states/encoder/s_{}_{}".format(str(self.run_id), str(self.update_counter)), 'wb+'))
+            pickle.dump(Es[0], open("dump_states/encoder/Es_{}_{}".format(str(self.run_id), str(self.update_counter)), "wb+"))
             print ("R[0]")
             print (R[0])
             

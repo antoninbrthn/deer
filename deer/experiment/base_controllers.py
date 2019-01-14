@@ -356,7 +356,7 @@ class InterleavedTestEpochController(Controller):
 
                 # AB: custom scores
                 print("Dumping custom score")
-                with open("custom_scores/scores_{}_rev{}".format(self._id, str(agent._environment._reverse)), "a+") as f:
+                with open("custom_scores/scores_{}_rev{}".format(agent.run_id, str(agent._environment._reverse)), "a+") as f:
                     f.write(str(score)+"\n")
 
             if self._summary_periodicity > 0 and self._summary_counter % self._summary_periodicity == 0:
