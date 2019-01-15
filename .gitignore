@@ -5,3 +5,10 @@
 /General_Deep_Q_RL/theano.py
 /General_Deep_Q_RL/plot.png
 /runs/*
+/example/maze/custom_scores/*
+/example/maze/dump/*
+/example/maze/dum_params/*
+/example/maze/dump_states/*
+/example/maze/nnets/*
+/example/maze/params/*
+/example/maze/scores/*

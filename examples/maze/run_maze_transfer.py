@@ -25,7 +25,7 @@ class Defaults:
     # ----------------------
 
     STEPS_PER_EPOCH = 1000 #2000
-    EPOCHS = 2
+    EPOCHS = 5
     STEPS_PER_TEST = 200  #200
     PERIOD_BTW_SUMMARY_PERFS = 1
     
@@ -256,12 +256,13 @@ if __name__ == "__main__":
     #    high_int_dim=HIGH_INT_DIM,
     #    internal_dim=3)
 
-    filename = "test_417d8b06ac33c8904453592fb782936f0469b32b_scores.jldump"
-    recovered_optimized_params = load("dump/params/" + filename)
-
+    logging.info("Importing algorithm parameters..")
+    filename = "50epoch_params_file"
+    recovered_optimized_params = pickle.load("50epoch_params/" + filename)
     learning_algo.setAllParams(recovered_optimized_params)
+    logging.info("Done.")
 
-    rand_ind=np.random.random_integers(0,1000,samples_transfer)
+    rand_ind=np.random.random_integers(0,100000,samples_transfer)
     original=[np.array([[agent._dataset._observations[o]._data[rand_ind[n]+l] for l in range(1)] for n in range(samples_transfer)]) for o in range(1)]
     transfer=[np.array([[-agent._dataset._observations[o]._data[rand_ind[n]+l] for l in range(1)] for n in range(samples_transfer)]) for o in range(1)]
 
@@ -275,7 +276,7 @@ if __name__ == "__main__":
 
     ## Transfer the learning : force the encoder to remain the same
     # Transfer between the two repr
-    learning_algo.transfer(original, transfer, 100000//samples_transfer) #5000000/samples_transfer)
+    learning_algo.transfer(original, transfer, 5000000//samples_transfer) #5000000/samples_transfer)
 
 
    # --- Re instantiate environment with reverse=True ---

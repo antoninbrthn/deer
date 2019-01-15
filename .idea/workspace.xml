@@ -2,39 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2dad6902-cb35-44bc-b672-87ab4ddcee9d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/deer/agent.py" beforeDir="false" afterPath="$PROJECT_DIR$/deer/agent.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deer/experiment/base_controllers.py" beforeDir="false" afterPath="$PROJECT_DIR$/deer/experiment/base_controllers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/maze/dump/original_obs" beforeDir="false" afterPath="$PROJECT_DIR$/examples/maze/dump/original_obs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/maze/dump/transfer_obs" beforeDir="false" afterPath="$PROJECT_DIR$/examples/maze/dump/transfer_obs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/maze/dump_states/encoder/Es_154748036_0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/maze/dump_states/encoder/Es_154748067_500" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/maze/dump_states/encoder/Es_154748099_1000" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/maze/dump_states/encoder/Es_2547_1000" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/maze/dump_states/encoder/Es_286_0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/maze/dump_states/encoder/Es_29_3500" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/maze/dump_states/encoder/Es_357_500" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/maze/dump_states/encoder/Es_4495_2500" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/maze/dump_states/encoder/Es_597_2000" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/maze/dump_states/encoder/Es_7483_0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/maze/dump_states/encoder/Es_7483_500" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/maze/dump_states/encoder/Es_8985_1500" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/maze/dump_states/encoder/Es_9457_3000" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/maze/dump_states/encoder/s_154748036_0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/maze/dump_states/encoder/s_154748067_500" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/maze/dump_states/encoder/s_154748099_1000" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/maze/dump_states/encoder/s_2547_1000" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/maze/dump_states/encoder/s_286_0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/maze/dump_states/encoder/s_29_3500" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/maze/dump_states/encoder/s_357_500" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/maze/dump_states/encoder/s_4495_2500" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/maze/dump_states/encoder/s_597_2000" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/maze/dump_states/encoder/s_7483_0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/maze/dump_states/encoder/s_7483_500" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/maze/dump_states/encoder/s_8985_1500" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/maze/dump_states/encoder/s_9457_3000" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/maze/run_maze.py" beforeDir="false" afterPath="$PROJECT_DIR$/examples/maze/run_maze.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/maze/scores/maze_env.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/maze/scores/run_maze.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/maze/run_maze_transfer.py" beforeDir="false" afterPath="$PROJECT_DIR$/examples/maze/run_maze_transfer.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -65,14 +35,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="3170" />
+          <entry key="py" value="3256" />
           <entry key="txt" value="19" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="19" />
-          <entry key="Python" value="3170" />
+          <entry key="Python" value="3256" />
         </counts>
       </usages-collector>
     </session>
@@ -110,8 +80,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/deer/experiment/base_controllers.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="98">
-              <caret line="16" column="25" lean-forward="true" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
+            <state relative-caret-position="186">
+              <caret line="364" column="71" selection-start-line="364" selection-start-column="71" selection-end-line="364" selection-end-column="71" />
               <folding>
                 <element signature="e#600#618#0" expanded="true" />
               </folding>
@@ -141,11 +111,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/examples/maze/run_maze.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-4533">
-              <caret line="60" column="17" selection-start-line="60" selection-start-column="17" selection-end-line="60" selection-end-column="17" />
+            <state relative-caret-position="325">
+              <caret line="407" selection-start-line="407" selection-end-line="407" />
               <folding>
                 <element signature="e#0#52#1" expanded="true" />
                 <element signature="e#54#101#0" expanded="true" />
@@ -154,11 +124,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/examples/maze/run_maze_transfer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2269">
-              <caret line="284" selection-start-line="284" selection-end-line="284" />
+            <state relative-caret-position="339">
+              <caret line="258" column="37" selection-start-line="258" selection-start-column="37" selection-end-line="258" selection-end-column="37" />
               <folding>
                 <element signature="e#0#52#1" expanded="true" />
                 <element signature="e#54#101#0" expanded="true" />
@@ -189,7 +159,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>discou</find>
       <find>&quot;Q</find>
       <find>self._mode</find>
       <find>_mode ==</find>
@@ -219,6 +188,7 @@
       <find>custo</find>
       <find>score</find>
       <find>rever</find>
+      <find>training_para</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -228,10 +198,10 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/deer/learning_algos/CRAR_keras.py" />
-        <option value="$PROJECT_DIR$/examples/maze/run_maze_transfer.py" />
         <option value="$PROJECT_DIR$/deer/agent.py" />
         <option value="$PROJECT_DIR$/deer/experiment/base_controllers.py" />
         <option value="$PROJECT_DIR$/examples/maze/run_maze.py" />
+        <option value="$PROJECT_DIR$/examples/maze/run_maze_transfer.py" />
       </list>
     </option>
   </component>
@@ -816,10 +786,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/examples/maze/run_maze.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="407" selection-start-line="407" selection-end-line="407" />
+          <folding>
+            <element signature="e#0#52#1" expanded="true" />
+            <element signature="e#54#101#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/deer/experiment/base_controllers.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="98">
-          <caret line="16" column="25" lean-forward="true" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
+        <state relative-caret-position="186">
+          <caret line="364" column="71" selection-start-line="364" selection-start-column="71" selection-end-line="364" selection-end-column="71" />
           <folding>
             <element signature="e#600#618#0" expanded="true" />
           </folding>
@@ -828,19 +809,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/examples/maze/run_maze_transfer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2269">
-          <caret line="284" selection-start-line="284" selection-end-line="284" />
-          <folding>
-            <element signature="e#0#52#1" expanded="true" />
-            <element signature="e#54#101#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examples/maze/run_maze.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4533">
-          <caret line="60" column="17" selection-start-line="60" selection-start-column="17" selection-end-line="60" selection-end-column="17" />
+        <state relative-caret-position="339">
+          <caret line="258" column="37" selection-start-line="258" selection-start-column="37" selection-end-line="258" selection-end-column="37" />
           <folding>
             <element signature="e#0#52#1" expanded="true" />
             <element signature="e#54#101#0" expanded="true" />
