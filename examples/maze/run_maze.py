@@ -18,8 +18,6 @@ import deer.experiment.base_controllers as bc
 
 from deer.policies import EpsilonGreedyPolicy
 
-global run_id
-run_id = np.random.randint(1, 10000, 1)[0]
 
 class Defaults:
     # ----------------------
@@ -27,7 +25,7 @@ class Defaults:
     # ----------------------
 
     STEPS_PER_EPOCH = 1000 #2000
-    EPOCHS = 2 
+    EPOCHS = 50
     STEPS_PER_TEST = 200  #200
     PERIOD_BTW_SUMMARY_PERFS = 1
     
@@ -53,20 +51,23 @@ class Defaults:
     EPSILON_MIN = 1.0
     EPSILON_DECAY = 10000
     UPDATE_FREQUENCY = 1
-    REPLAY_MEMORY_SIZE = 1000 #1000000
+    REPLAY_MEMORY_SIZE = 1000000 #1000000
     BATCH_SIZE = 32
     FREEZE_INTERVAL = 1000
     DETERMINISTIC = True
 
 HIGHER_DIM_OBS = True
 HIGH_INT_DIM = True
-N_SAMPLES=200 #200000
+N_SAMPLES=200000 #200000
 samples_transfer=100
 
+LOG_FILENAME = "log"
+FORMAT = "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
 
 if __name__ == "__main__":
-    logging.basicConfig(level=logging.INFO)
-    
+    logging.basicConfig(level=logging.INFO, filename=LOG_FILENAME, format=FORMAT)
+    logging.info('Main script start')
+
     # --- Parse parameters ---
     parameters = process_args(sys.argv[1:], Defaults)
     if parameters.deterministic:
@@ -233,10 +234,12 @@ if __name__ == "__main__":
     agent.gathering_data=False
     agent.run(parameters.epochs, parameters.steps_per_epoch)
 
-
+    logging.info('End run')
    ###
    # TRANSFER
    ###
+    logging.info('Begin transfer')
+
     optimized_params=learning_algo.getAllParams()
     print ("optimized_params")
     #print (optimized_params)
@@ -259,7 +262,8 @@ if __name__ == "__main__":
     #    internal_dim=3)
     # learning_algo.setAllParams(optimized_params)
 
-    rand_ind=np.random.random_integers(0,1000,samples_transfer)
+
+    rand_ind=np.random.random_integers(0,100000,samples_transfer)
     original=[np.array([[agent._dataset._observations[o]._data[rand_ind[n]+l] for l in range(1)] for n in range(samples_transfer)]) for o in range(1)]
     transfer=[np.array([[-agent._dataset._observations[o]._data[rand_ind[n]+l] for l in range(1)] for n in range(samples_transfer)]) for o in range(1)]
 
@@ -273,8 +277,9 @@ if __name__ == "__main__":
 
     ## Transfer the learning : force the encoder to remain the same
     # Transfer between the two repr
-    learning_algo.transfer(original, transfer, 100000//samples_transfer) #5000000/samples_transfer)
-
+    logging.info('Transfering learning to algo...')
+    learning_algo.transfer(original, transfer, 1000000//samples_transfer) #5000000/samples_transfer)
+    logging.info('Done')
 
    # --- Re instantiate environment with reverse=True ---
     env = maze_env(rng, higher_dim_obs=HIGHER_DIM_OBS, reverse=True)
@@ -385,10 +390,10 @@ if __name__ == "__main__":
 #        periodicity=2,
 #        show_score=True,
 #        summarize_every=1))
-
+    logging.info('Starting run in transfer')
     agent.gathering_data=False
     agent.run(parameters.epochs, parameters.steps_per_epoch)
-
+    logging.info('Done')
 
 
     # --- Show results ---

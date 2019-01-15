@@ -15,16 +15,17 @@ from deer.default_parser import process_args
 from deer.agent import NeuralAgent
 from maze_env import MyEnv as maze_env
 import deer.experiment.base_controllers as bc
+import pickle
 
 from deer.policies import EpsilonGreedyPolicy
-
 
 class Defaults:
     # ----------------------
     # Experiment Parameters
     # ----------------------
+
     STEPS_PER_EPOCH = 1000 #2000
-    EPOCHS = 2 
+    EPOCHS = 2
     STEPS_PER_TEST = 200  #200
     PERIOD_BTW_SUMMARY_PERFS = 1
     
@@ -50,14 +51,14 @@ class Defaults:
     EPSILON_MIN = 1.0
     EPSILON_DECAY = 10000
     UPDATE_FREQUENCY = 1
-    REPLAY_MEMORY_SIZE = 100000 #1000000
+    REPLAY_MEMORY_SIZE = 1000000 #1000000
     BATCH_SIZE = 32
     FREEZE_INTERVAL = 1000
     DETERMINISTIC = True
 
 HIGHER_DIM_OBS = True
 HIGH_INT_DIM = True
-N_SAMPLES=20000 #200000
+N_SAMPLES=200000 #200000
 samples_transfer=100
 
 
@@ -158,11 +159,11 @@ if __name__ == "__main__":
     # During training epochs, we want to train the agent after every [parameters.update_frequency] action it takes.
     # Plus, we also want to display after each training episode (!= than after every training) the average bellman
     # residual and the average of the V values obtained during the last episode, hence the two last arguments.
-    agent.attach(bc.TrainerController(
-        evaluate_on='action',
-        periodicity=parameters.update_frequency,
-        show_episode_avg_V_value=True,
-        show_avg_Bellman_residual=True))
+    # agent.attach(bc.TrainerController(
+    #     evaluate_on='action',
+    #     periodicity=parameters.update_frequency,
+    #     show_episode_avg_V_value=True,
+    #     show_avg_Bellman_residual=True))
 
     # We wish to discover, among all versions of our neural network (i.e., after every training epoch), which one
     # seems to generalize the better, thus which one has the highest validation score. Here, we do not care about the
@@ -188,13 +189,13 @@ if __name__ == "__main__":
     # [parameters.period_btw_summary_perfs] *validation* epochs.
 
     # Controller_to_disable : all expect the current InterleavedTestEpochController and FindBestController
-    agent.attach(bc.InterleavedTestEpochController(
-        id=3,
-        epoch_length=parameters.steps_per_test,
-        controllers_to_disable=[0, 1, 2, 3, 4], #, 6, 7, 8],
-        periodicity=2,
-        show_score=True,
-        summarize_every=1))
+    # agent.attach(bc.InterleavedTestEpochController(
+    #     id=3,
+    #     epoch_length=parameters.steps_per_test,
+    #     controllers_to_disable=[0, 1, 2, 3, 4], #, 6, 7, 8],
+    #     periodicity=2,
+    #     show_score=True,
+    #     summarize_every=1))
 
     # AB : accelerate running time
     # agent.attach(bc.InterleavedTestEpochController(
@@ -222,22 +223,22 @@ if __name__ == "__main__":
     #     summarize_every=1))
 
     # --- Run the experiment ---
-    try:
-        os.mkdir("params")
-    except Exception:
-        pass
-    dump(vars(parameters), "params/" + fname + ".jldump")
-    agent.gathering_data=False
-    agent.run(parameters.epochs, parameters.steps_per_epoch)
+    # try:
+    #     os.mkdir("params")
+    # except Exception:
+    #     pass
+    # dump(vars(parameters), "params/" + fname + ".jldump")
+    # agent.gathering_data=False
+    # agent.run(parameters.epochs, parameters.steps_per_epoch)
 
 
    ###
    # TRANSFER
    ###
-    optimized_params=learning_algo.getAllParams()
-    print ("optimized_params")
+    #optimized_params=learning_algo.getAllParams()
+    #print ("optimized_params")
     #print (optimized_params)
-    pickle.dump(optimized_params, open("dump/optimized_params_"+fname, 'wb+'))
+
 
    # --- Instantiate learning_algo ---
     # AB : might not need to plain copy the parameters from the previous agent, only transfer the encoder function
@@ -254,7 +255,11 @@ if __name__ == "__main__":
     #    double_Q=True,
     #    high_int_dim=HIGH_INT_DIM,
     #    internal_dim=3)
-    # learning_algo.setAllParams(optimized_params)
+
+    filename = "test_417d8b06ac33c8904453592fb782936f0469b32b_scores.jldump"
+    recovered_optimized_params = load("dump/params/" + filename)
+
+    learning_algo.setAllParams(recovered_optimized_params)
 
     rand_ind=np.random.random_integers(0,1000,samples_transfer)
     original=[np.array([[agent._dataset._observations[o]._data[rand_ind[n]+l] for l in range(1)] for n in range(samples_transfer)]) for o in range(1)]
@@ -351,7 +356,7 @@ if __name__ == "__main__":
     # obtained, hence the showScore=True. Finally, we want to call the summarizePerformance method of ALE_env every
     # [parameters.period_btw_summary_perfs] *validation* epochs.
     agent.attach(bc.InterleavedTestEpochController(
-        id=maze_env.VALIDATION_MODE,
+        id=3, #maze_env.VALIDATION_MODE,
         epoch_length=parameters.steps_per_test,
         controllers_to_disable=[0, 1, 2, 3, 4],
         periodicity=2,

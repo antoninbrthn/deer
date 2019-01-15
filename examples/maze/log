@@ -1,0 +1,14 @@
+INFO:root:Main script start
+INFO:root:Starting epoch 0
+INFO:root:Starting epoch 0
+2019-01-15 00:59:49,991 - root - INFO - Main script start
+2019-01-15 00:59:58,378 - root - INFO - Starting epoch 0
+2019-01-15 00:59:58,441 - root - INFO - Starting epoch 0
+2019-01-15 01:01:16,946 - root - INFO - Starting epoch 1
+2019-01-15 01:02:00,995 - root - INFO - End run
+2019-01-15 01:02:00,995 - root - INFO - Begin transfer
+2019-01-15 01:02:01,486 - root - INFO - Transfering learning to algo...
+2019-01-15 01:02:02,315 - root - INFO - Done
+2019-01-15 01:02:02,822 - root - INFO - Starting epoch 0
+2019-01-15 01:02:02,901 - root - INFO - Starting run in transfer
+2019-01-15 01:02:02,905 - root - INFO - Starting epoch 0

@@ -2,21 +2,39 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2dad6902-cb35-44bc-b672-87ab4ddcee9d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/examples/maze/custom_scores/scores_154748049_revFalse" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/examples/maze/custom_scores/scores_154748054_revFalse" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/examples/maze/custom_scores/scores_154748061_revFalse" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/examples/maze/custom_scores/scores_154748067_revFalse" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/examples/maze/custom_scores/scores_154748073_revFalse" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/examples/maze/custom_scores/scores_154748079_revFalse" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/examples/maze/custom_scores/scores_154748085_revFalse" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/examples/maze/custom_scores/scores_154748092_revFalse" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/examples/maze/dump_states/encoder/Es_154748067_500" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/examples/maze/dump_states/encoder/s_154748067_500" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deer/agent.py" beforeDir="false" afterPath="$PROJECT_DIR$/deer/agent.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/deer/experiment/base_controllers.py" beforeDir="false" afterPath="$PROJECT_DIR$/deer/experiment/base_controllers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/examples/maze/dump/original_obs" beforeDir="false" afterPath="$PROJECT_DIR$/examples/maze/dump/original_obs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/examples/maze/dump/transfer_obs" beforeDir="false" afterPath="$PROJECT_DIR$/examples/maze/dump/transfer_obs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/maze/dump_states/encoder/Es_154748036_0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/maze/dump_states/encoder/Es_154748067_500" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/maze/dump_states/encoder/Es_154748099_1000" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/maze/dump_states/encoder/Es_2547_1000" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/maze/dump_states/encoder/Es_286_0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/maze/dump_states/encoder/Es_29_3500" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/maze/dump_states/encoder/Es_357_500" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/maze/dump_states/encoder/Es_4495_2500" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/maze/dump_states/encoder/Es_597_2000" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/maze/dump_states/encoder/Es_7483_0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/maze/dump_states/encoder/Es_7483_500" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/maze/dump_states/encoder/Es_8985_1500" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/maze/dump_states/encoder/Es_9457_3000" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/maze/dump_states/encoder/s_154748036_0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/maze/dump_states/encoder/s_154748067_500" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/maze/dump_states/encoder/s_154748099_1000" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/maze/dump_states/encoder/s_2547_1000" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/maze/dump_states/encoder/s_286_0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/maze/dump_states/encoder/s_29_3500" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/maze/dump_states/encoder/s_357_500" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/maze/dump_states/encoder/s_4495_2500" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/maze/dump_states/encoder/s_597_2000" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/maze/dump_states/encoder/s_7483_0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/maze/dump_states/encoder/s_7483_500" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/maze/dump_states/encoder/s_8985_1500" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/maze/dump_states/encoder/s_9457_3000" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/examples/maze/run_maze.py" beforeDir="false" afterPath="$PROJECT_DIR$/examples/maze/run_maze.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/maze/scores/maze_env.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/maze/scores/run_maze.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,7 +43,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/deer$run_maze.coverage" NAME="run_maze Coverage Results" MODIFIED="1547480349000" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/examples/maze" />
+    <SUITE FILE_PATH="coverage/deer$run_maze.coverage" NAME="run_maze Coverage Results" MODIFIED="1547510387614" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/examples/maze" />
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="858678558">
@@ -37,24 +55,24 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="76" />
+          <entry key="py" value="82" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="76" />
+          <entry key="Python" value="82" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="2585" />
+          <entry key="py" value="3170" />
           <entry key="txt" value="19" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="19" />
-          <entry key="Python" value="2585" />
+          <entry key="Python" value="3170" />
         </counts>
       </usages-collector>
     </session>
@@ -64,8 +82,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/deer/learning_algos/CRAR_keras.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1024">
-              <caret line="232" column="12" selection-start-line="232" selection-start-column="12" selection-end-line="232" selection-end-column="12" />
+            <state relative-caret-position="205">
+              <caret line="601" column="18" selection-start-line="601" selection-start-column="18" selection-end-line="601" selection-end-column="18" />
               <folding>
                 <element signature="e#0#57#1" expanded="true" />
                 <element signature="e#59#77#0" expanded="true" />
@@ -77,9 +95,34 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/deer/agent.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="196">
+              <caret line="19" selection-start-line="19" selection-end-line="19" />
+              <folding>
+                <element signature="e#224#233#0" expanded="true" />
+                <element signature="e#477#2100#1" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/deer/experiment/base_controllers.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="98">
+              <caret line="16" column="25" lean-forward="true" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
+              <folding>
+                <element signature="e#600#618#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/deer/base_classes/learning_algo.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
+            <state relative-caret-position="561">
               <caret line="73" column="11" selection-start-line="73" selection-start-column="11" selection-end-line="73" selection-end-column="11" />
             </state>
           </provider>
@@ -88,20 +131,21 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/examples/maze/maze_env.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="98">
-              <caret line="7" column="41" selection-start-line="7" selection-start-column="41" selection-end-line="7" selection-end-column="41" />
+            <state relative-caret-position="420">
+              <caret line="30" column="21" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="21" />
               <folding>
                 <element signature="e#0#75#1" expanded="true" />
+                <element signature="e#76#94#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/examples/maze/run_maze.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="227">
-              <caret line="38" column="28" selection-start-line="38" selection-start-column="28" selection-end-line="38" selection-end-column="28" />
+            <state relative-caret-position="-4533">
+              <caret line="60" column="17" selection-start-line="60" selection-start-column="17" selection-end-line="60" selection-end-column="17" />
               <folding>
                 <element signature="e#0#52#1" expanded="true" />
                 <element signature="e#54#101#0" expanded="true" />
@@ -111,41 +155,32 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/deer/agent.py">
+        <entry file="file://$PROJECT_DIR$/examples/maze/run_maze_transfer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="197" column="36" selection-start-line="197" selection-start-column="36" selection-end-line="197" selection-end-column="36" />
+            <state relative-caret-position="2269">
+              <caret line="284" selection-start-line="284" selection-end-line="284" />
               <folding>
-                <element signature="e#224#233#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/deer/experiment/base_controllers.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="134">
-              <caret line="360" column="44" lean-forward="true" selection-start-line="360" selection-start-column="44" selection-end-line="360" selection-end-column="44" />
-              <folding>
-                <element signature="e#600#618#0" expanded="true" />
-                <element signature="e#2562#2835#1" expanded="true" />
+                <element signature="e#0#52#1" expanded="true" />
+                <element signature="e#54#101#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/deer/learning_algos/NN_CRAR_keras.py">
+        <entry file="file://$PROJECT_DIR$/deer/learning_algos/q_net_keras.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="137">
-              <caret line="529" column="12" selection-start-line="529" selection-start-column="12" selection-end-line="529" selection-end-column="12" />
-              <folding>
-                <element signature="e#42#60#0" expanded="true" />
-                <element signature="e#13744#14781#1" expanded="true" />
-                <element signature="e#20443#20728#1" expanded="true" />
-                <element signature="e#22717#23830#1" expanded="true" />
-              </folding>
+            <state relative-caret-position="394">
+              <caret line="147" column="16" selection-start-line="147" selection-start-column="16" selection-end-line="147" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/examples/test_CRAR/simple_maze_env.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="579">
+              <caret line="140" column="18" selection-start-line="140" selection-start-column="18" selection-end-line="140" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -154,18 +189,7 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>x_original</find>
-      <find>dumpin</find>
-      <find>diff_s_</find>
-      <find>self.loss_T</find>
-      <find>avera</find>
-      <find>laby</find>
-      <find>R[0]</find>
-      <find>test_data_set.observations.shape</find>
-      <find>18760329e</find>
-      <find>discoun</find>
       <find>discou</find>
-      <find>Es</find>
       <find>&quot;Q</find>
       <find>self._mode</find>
       <find>_mode ==</find>
@@ -184,6 +208,17 @@
       <find>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</find>
       <find>agen</find>
       <find>me.tim</find>
+      <find>end</find>
+      <find>Es</find>
+      <find>x_original</find>
+      <find>original</find>
+      <find>trans</find>
+      <find>predict</find>
+      <find>learning_algo.e</find>
+      <find>time</find>
+      <find>custo</find>
+      <find>score</find>
+      <find>rever</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -192,10 +227,11 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/deer/agent.py" />
         <option value="$PROJECT_DIR$/deer/learning_algos/CRAR_keras.py" />
-        <option value="$PROJECT_DIR$/examples/maze/run_maze.py" />
+        <option value="$PROJECT_DIR$/examples/maze/run_maze_transfer.py" />
+        <option value="$PROJECT_DIR$/deer/agent.py" />
         <option value="$PROJECT_DIR$/deer/experiment/base_controllers.py" />
+        <option value="$PROJECT_DIR$/examples/maze/run_maze.py" />
       </list>
     </option>
   </component>
@@ -371,7 +407,7 @@
       <window_info anchor="bottom" id="Docker" order="5" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="6" />
       <window_info anchor="bottom" id="Find" order="7" weight="0.3290653" />
-      <window_info active="true" anchor="bottom" id="Run" order="8" sideWeight="0.49928468" visible="true" weight="0.50963855" />
+      <window_info active="true" anchor="bottom" id="Run" order="8" sideWeight="0.49928468" visible="true" weight="0.42289156" />
       <window_info anchor="bottom" id="Debug" order="9" sideWeight="0.49928468" weight="0.3554217" />
       <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
@@ -684,13 +720,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/examples/test_CRAR/simple_maze_env.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="515">
-          <caret line="102" column="8" selection-start-line="102" selection-start-column="8" selection-end-line="102" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/deer/learning_algos/NN_CRAR_keras.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="137">
@@ -724,37 +753,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/deer/agent.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="197" column="36" selection-start-line="197" selection-start-column="36" selection-end-line="197" selection-end-column="36" />
-          <folding>
-            <element signature="e#224#233#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/deer/base_classes/learning_algo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="73" column="11" selection-start-line="73" selection-start-column="11" selection-end-line="73" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examples/maze/maze_env.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="98">
-          <caret line="7" column="41" selection-start-line="7" selection-start-column="41" selection-end-line="7" selection-end-column="41" />
-          <folding>
-            <element signature="e#0#75#1" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/deer/learning_algos/CRAR_keras.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1024">
-          <caret line="232" column="12" selection-start-line="232" selection-start-column="12" selection-end-line="232" selection-end-column="12" />
+        <state relative-caret-position="205">
+          <caret line="601" column="18" selection-start-line="601" selection-start-column="18" selection-end-line="601" selection-end-column="18" />
           <folding>
             <element signature="e#0#57#1" expanded="true" />
             <element signature="e#59#77#0" expanded="true" />
@@ -764,10 +766,70 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/examples/maze/run_maze.py">
+    <entry file="file://$PROJECT_DIR$/deer/learning_algos/q_net_keras.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="38" column="28" selection-start-line="38" selection-start-column="28" selection-end-line="38" selection-end-column="28" />
+        <state relative-caret-position="394">
+          <caret line="147" column="16" selection-start-line="147" selection-start-column="16" selection-end-line="147" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/test_CRAR/simple_maze_env.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="579">
+          <caret line="140" column="18" selection-start-line="140" selection-start-column="18" selection-end-line="140" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/deer/agent.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+          <folding>
+            <element signature="e#224#233#0" expanded="true" />
+            <element signature="e#477#2100#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/maze/maze_env.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="30" column="21" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#75#1" expanded="true" />
+            <element signature="e#76#94#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/Cellar/python/3.6.5_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/logging/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="1791" column="32" lean-forward="true" selection-start-line="1791" selection-start-column="32" selection-end-line="1791" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/deer/base_classes/learning_algo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="73" column="11" selection-start-line="73" selection-start-column="11" selection-end-line="73" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/deer/experiment/base_controllers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="98">
+          <caret line="16" column="25" lean-forward="true" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
+          <folding>
+            <element signature="e#600#618#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/maze/run_maze_transfer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2269">
+          <caret line="284" selection-start-line="284" selection-end-line="284" />
           <folding>
             <element signature="e#0#52#1" expanded="true" />
             <element signature="e#54#101#0" expanded="true" />
@@ -775,13 +837,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/deer/experiment/base_controllers.py">
+    <entry file="file://$PROJECT_DIR$/examples/maze/run_maze.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="360" column="44" lean-forward="true" selection-start-line="360" selection-start-column="44" selection-end-line="360" selection-end-column="44" />
+        <state relative-caret-position="-4533">
+          <caret line="60" column="17" selection-start-line="60" selection-start-column="17" selection-end-line="60" selection-end-column="17" />
           <folding>
-            <element signature="e#600#618#0" expanded="true" />
-            <element signature="e#2562#2835#1" expanded="true" />
+            <element signature="e#0#52#1" expanded="true" />
+            <element signature="e#54#101#0" expanded="true" />
           </folding>
         </state>
       </provider>

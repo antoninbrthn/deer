@@ -12,6 +12,7 @@ import numpy as np
 import joblib
 import os
 import time
+import logging
 
 class Controller(object):
     """A base controller that does nothing when receiving the various signals emitted by an agent. This class should 
@@ -354,10 +355,11 @@ class InterleavedTestEpochController(Controller):
             if self._show_score:
                 score,nbr_episodes=agent.totalRewardOverLastTest()
                 print("Testing score per episode (id: {}) is {} (average over {} episode(s))".format(self._id, score, nbr_episodes))
+                logging.info("Testing score per episode (id: {}) is {} (average over {} episode(s))".format(self._id, score, nbr_episodes))
 
                 # AB: custom scores
                 print("Dumping custom score")
-                with open("custom_scores/scores_{}_rev{}".format(str(int(time.time()/1000)), str(agent._environment._reverse)), "a+") as f:
+                with open("custom_scores/scores_{}_rev{}".format(str(int(time.time()/10000)), str(agent._environment._reverse)), "a+") as f:
                     f.write(str(score)+"\n")
 
             if self._summary_periodicity > 0 and self._summary_counter % self._summary_periodicity == 0:

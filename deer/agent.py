@@ -11,10 +11,12 @@ import copy
 import sys
 import joblib
 from warnings import warn
-
+import pickle
 from .experiment import base_controllers as controllers
 from .helper import tree 
 from deer.policies import EpsilonGreedyPolicy
+import time
+import logging
 
 class NeuralAgent(object):
     """The NeuralAgent class wraps a learning algorithm (such as a deep Q-network) for training and testing in a given environment.
@@ -266,6 +268,7 @@ class NeuralAgent(object):
         for c in self._controllers: c.onStart(self)
         i = 0
         while i < n_epochs or self._mode_epochs_length > 0:
+            logging.info('Starting epoch {}'.format(str(i)))
             self._training_loss_averages = []
 
             if self._mode != -1:                
@@ -278,8 +281,16 @@ class NeuralAgent(object):
                 while length > 0:
                     length = self._runEpisode(length)
                 i += 1
+
             for c in self._controllers: c.onEpochEnd(self)
-            
+
+            # AB : dump agent parameter
+            training_params= self._learning_algo.getAllParams()
+            pickle.dump(training_params, open("dump_params/training_params_{}_rev{}_epoch{}".format(str(int(time.time()/1000)),
+                                                                                                    str(self._environment._reverse),
+                                                                                                    str(i))
+                                              , 'wb+'))
+
         self._environment.end()
         for c in self._controllers:
             try:
