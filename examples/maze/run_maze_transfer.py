@@ -13,6 +13,7 @@ import pickle
 import matplotlib.pyplot as plt
 from deer.default_parser import process_args
 from deer.agent import NeuralAgent
+from utils import *
 from maze_env import MyEnv as maze_env
 import deer.experiment.base_controllers as bc
 import pickle
@@ -25,7 +26,7 @@ class Defaults:
     # ----------------------
 
     STEPS_PER_EPOCH = 1000 #2000
-    EPOCHS = 5
+    EPOCHS = 20
     STEPS_PER_TEST = 200  #200
     PERIOD_BTW_SUMMARY_PERFS = 1
     
@@ -258,16 +259,22 @@ if __name__ == "__main__":
 
     logging.info("Importing algorithm parameters..")
     filename = "50epoch_params_file"
-    recovered_optimized_params = pickle.load("50epoch_params/" + filename)
+    recovered_optimized_params = pickle.load(open("50epoch_params/" + filename, "rb"))
     learning_algo.setAllParams(recovered_optimized_params)
     logging.info("Done.")
 
-    rand_ind=np.random.random_integers(0,100000,samples_transfer)
-    original=[np.array([[agent._dataset._observations[o]._data[rand_ind[n]+l] for l in range(1)] for n in range(samples_transfer)]) for o in range(1)]
-    transfer=[np.array([[-agent._dataset._observations[o]._data[rand_ind[n]+l] for l in range(1)] for n in range(samples_transfer)]) for o in range(1)]
 
     # AB : now a random noise on each obs
-    #transfer_noise=
+
+    transfer_noise = True
+    rand_ind=np.random.random_integers(0,100000,samples_transfer)
+    original=[np.array([[agent._dataset._observations[o]._data[rand_ind[n]+l] for l in range(1)] for n in range(samples_transfer)]) for o in range(1)]
+    if transfer_noise == False:
+        transfer=[np.array([[-agent._dataset._observations[o]._data[rand_ind[n]+l] for l in range(1)] for n in range(samples_transfer)]) for o in range(1)]
+    else:
+        transfer=[np.array([[big_noise(agent._dataset._observations[o]._data[rand_ind[n]+l]) for l in range(1)] for n in range(samples_transfer)]) for o in range(1)]
+
+
 
     print ("original[0][0:10], transfer[0][0:10]")
     print (original[0][0:10], transfer[0][0:10])
@@ -276,7 +283,7 @@ if __name__ == "__main__":
 
     ## Transfer the learning : force the encoder to remain the same
     # Transfer between the two repr
-    learning_algo.transfer(original, transfer, 5000000//samples_transfer) #5000000/samples_transfer)
+    # learning_algo.transfer(original, transfer, 5000000//samples_transfer) #5000000/samples_transfer)
 
 
    # --- Re instantiate environment with reverse=True ---
@@ -336,7 +343,10 @@ if __name__ == "__main__":
     agent._dataset._rewards._data=old_rewards
     agent._dataset._terminals._data=old_terminals
     agent._dataset._actions._data=old_actions
-    agent._dataset._observations[0]._data=-old_observations
+    if transfer_noise == False:
+        agent._dataset._observations[0]._data = -old_observations
+    else:
+        agent._dataset._observations[0]._data = noise(old_observations)
     # AB : Change to old_observations + noise, maybe the same as for transfer_noise ?
 
     # During training epochs, we want to train the agent after every [parameters.update_frequency] action it takes.

@@ -14,6 +14,7 @@ from deer.base_classes import Environment
 #import matplotlib.pyplot as plt
 import copy 
 import algorithms.a_star_path_finding as pf
+from utils import *
 
 class MyEnv(Environment):
     VALIDATION_MODE = 0
@@ -29,6 +30,8 @@ class MyEnv(Environment):
         self._size_maze = 8
         self._higher_dim_obs=kwargs.get('higher_dim_obs',False)
         self._reverse=kwargs.get('reverse',False)
+        self._noisy = kwargs.get('noisy', False)
+        self._noise_strength = 0.2
 
         self._n_walls = int((self._size_maze-2)**2/3.)#int((self._size_maze)**2/3.)
         self._n_rewards = 3
@@ -198,7 +201,13 @@ class MyEnv(Environment):
             
         if(self._reverse==True):
             self._map=-self._map #1-self._map
-        
+
+        if(self._noisy==True):
+            self._map = big_noise(self_map)
+            # a, b= -1*self._noise_strength, 1*self._noise_strength
+            # noise = (b-a)*np.random.rand(48,48) + a
+            # self._map+=noise
+            # self._map=np.clip(self._map, a_min=-1, a_max=1)
         return [self._map]
 
     def inTerminalState(self):

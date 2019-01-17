@@ -610,10 +610,10 @@ class CRAR(LearningAlgo):
         print("Transfer in progress...")
         for i in range(epochs):
             size = original[0].shape[0]
-            #print ( "train" )
-            #print ( self.encoder.train_on_batch(transfer[0][0:int(size*0.8)] , x_original[0:int(size*0.8)] ) )
-            #print ( "validation" )
-            #print ( self.encoder.test_on_batch(transfer[0][int(size*0.8):] , x_original[int(size*0.8):]) )
+            print ( "train" )
+            print ( self.encoder.train_on_batch(transfer[0][0:int(size*0.8)] , x_original[0:int(size*0.8)] ) )
+            print ( "validation" )
+            print ( self.encoder.test_on_batch(transfer[0][int(size*0.8):] , x_original[int(size*0.8):]) )
         print("Transfer completed.")
 
         self.encoder.compile(optimizer=optimizer4,
