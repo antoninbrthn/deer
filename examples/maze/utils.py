@@ -9,7 +9,7 @@ def noise(obs, strength = 0.5):
     return noisy_obs
 
 
-def big_noise(obs, strength = 0.6, size = 3):
+def big_noise(obs, strength = 0.3, size = 2):
     b = 1 * strength
     a = -1 * strength
     noise = (b - a) * np.random.random(obs.shape[-6:-2] + (obs.shape[-2] // size, obs.shape[-1] // size)) + a
@@ -18,5 +18,5 @@ def big_noise(obs, strength = 0.6, size = 3):
     return noisy_obs
 
 
-def efficient_noise(obs, strength=0.6, size=3):
+def efficient_noise(obs, strength=0.3, size=2):
     return np.array([big_noise(o, strength=strength, size=size) for o in obs])

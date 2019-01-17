@@ -52,14 +52,14 @@ class Defaults:
     EPSILON_MIN = 1.0
     EPSILON_DECAY = 10000
     UPDATE_FREQUENCY = 1
-    REPLAY_MEMORY_SIZE = 1000000 #1000000
+    REPLAY_MEMORY_SIZE = 100000 #1000000
     BATCH_SIZE = 32
     FREEZE_INTERVAL = 1000
     DETERMINISTIC = True
 
 HIGHER_DIM_OBS = True
 HIGH_INT_DIM = True
-N_SAMPLES=200000 #200000
+N_SAMPLES=20000 #200000
 samples_transfer=100
 
 
@@ -267,7 +267,7 @@ if __name__ == "__main__":
     # AB : now a random noise on each obs
 
     transfer_noise = True
-    rand_ind=np.random.random_integers(0,100000,samples_transfer)
+    rand_ind=np.random.random_integers(0,10000,samples_transfer)
     original=[np.array([[agent._dataset._observations[o]._data[rand_ind[n]+l] for l in range(1)] for n in range(samples_transfer)]) for o in range(1)]
     if transfer_noise == False:
         transfer=[np.array([[-agent._dataset._observations[o]._data[rand_ind[n]+l] for l in range(1)] for n in range(samples_transfer)]) for o in range(1)]
@@ -287,7 +287,7 @@ if __name__ == "__main__":
 
 
    # --- Re instantiate environment with reverse=True ---
-    env = maze_env(rng, higher_dim_obs=HIGHER_DIM_OBS, reverse=True)
+    env = maze_env(rng, higher_dim_obs=HIGHER_DIM_OBS, noisy=True)
 
     # AB: will need to implement a "noise" method in env
 

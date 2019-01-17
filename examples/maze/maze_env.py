@@ -31,7 +31,6 @@ class MyEnv(Environment):
         self._higher_dim_obs=kwargs.get('higher_dim_obs',False)
         self._reverse=kwargs.get('reverse',False)
         self._noisy = kwargs.get('noisy', False)
-        self._noise_strength = 0.2
 
         self._n_walls = int((self._size_maze-2)**2/3.)#int((self._size_maze)**2/3.)
         self._n_rewards = 3

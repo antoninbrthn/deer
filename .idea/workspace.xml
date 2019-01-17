@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2dad6902-cb35-44bc-b672-87ab4ddcee9d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/examples/maze/dump/original_obs" beforeDir="false" afterPath="$PROJECT_DIR$/examples/maze/dump/original_obs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/maze/dump/transfer_obs" beforeDir="false" afterPath="$PROJECT_DIR$/examples/maze/dump/transfer_obs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/maze/maze_env.py" beforeDir="false" afterPath="$PROJECT_DIR$/examples/maze/maze_env.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/examples/maze/run_maze_transfer.py" beforeDir="false" afterPath="$PROJECT_DIR$/examples/maze/run_maze_transfer.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/examples/maze/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/examples/maze/utils.py" afterDir="false" />
     </list>
@@ -39,14 +38,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="3661" />
+          <entry key="py" value="3675" />
           <entry key="txt" value="19" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="19" />
-          <entry key="Python" value="3661" />
+          <entry key="Python" value="3675" />
         </counts>
       </usages-collector>
     </session>
@@ -89,8 +88,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/examples/maze/maze_env.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="17" selection-start-line="17" selection-end-line="17" />
+            <state relative-caret-position="171">
+              <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
               <folding>
                 <element signature="e#0#75#1" expanded="true" />
                 <element signature="e#76#94#0" expanded="true" />
@@ -115,8 +114,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/examples/maze/run_maze_transfer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1273">
-              <caret line="353" column="48" selection-start-line="353" selection-start-column="48" selection-end-line="353" selection-end-column="48" />
+            <state relative-caret-position="233">
+              <caret line="404" lean-forward="true" selection-start-line="404" selection-end-line="404" />
               <folding>
                 <element signature="e#0#52#1" expanded="true" />
                 <element signature="e#54#101#0" expanded="true" />
@@ -128,8 +127,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/deer/learning_algos/CRAR_keras.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6734">
-              <caret line="621" selection-start-line="621" selection-end-line="621" />
+            <state relative-caret-position="-3847">
+              <caret line="75" lean-forward="true" selection-start-line="75" selection-end-line="75" />
               <folding>
                 <element signature="e#0#57#1" expanded="true" />
                 <element signature="e#59#77#0" expanded="true" />
@@ -163,9 +162,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>_id =</find>
-      <find>_id</find>
-      <find>New</find>
       <find>validation_</find>
       <find>pickle.dump</find>
       <find>reve</find>
@@ -191,8 +187,11 @@
       <find>pickle.l</find>
       <find>rever</find>
       <find>_high_int_dim</find>
-      <find>_reverse</find>
       <find>noise</find>
+      <find>dump_states</find>
+      <find>_reverse</find>
+      <find>_noisy</find>
+      <find>_noise_strength</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -205,8 +204,8 @@
         <option value="$PROJECT_DIR$/deer/experiment/base_controllers.py" />
         <option value="$PROJECT_DIR$/examples/maze/run_maze.py" />
         <option value="$PROJECT_DIR$/deer/learning_algos/CRAR_keras.py" />
-        <option value="$PROJECT_DIR$/examples/maze/maze_env.py" />
         <option value="$PROJECT_DIR$/examples/maze/run_maze_transfer.py" />
+        <option value="$PROJECT_DIR$/examples/maze/maze_env.py" />
       </list>
     </option>
   </component>
@@ -724,6 +723,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="137">
           <caret line="529" column="12" selection-start-line="529" selection-start-column="12" selection-end-line="529" selection-end-column="12" />
+          <folding>
+            <element signature="e#42#60#0" expanded="true" />
+            <element signature="e#13744#14781#1" expanded="true" />
+            <element signature="e#20443#20728#1" expanded="true" />
+            <element signature="e#22717#23830#1" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -731,6 +736,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="89" column="23" selection-start-line="89" selection-start-column="23" selection-end-line="89" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#47#1" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -752,6 +760,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="233">
           <caret line="72" column="21" lean-forward="true" selection-start-line="72" selection-start-column="21" selection-end-line="72" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#28#1" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -771,17 +782,6 @@
           <caret line="364" column="71" selection-start-line="364" selection-start-column="71" selection-end-line="364" selection-end-column="71" />
           <folding>
             <element signature="e#600#618#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/deer/learning_algos/CRAR_keras.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6734">
-          <caret line="621" selection-start-line="621" selection-end-line="621" />
-          <folding>
-            <element signature="e#0#57#1" expanded="true" />
-            <element signature="e#59#77#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -810,6 +810,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/examples/maze/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/deer/learning_algos/CRAR_keras.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3847">
+          <caret line="75" lean-forward="true" selection-start-line="75" selection-end-line="75" />
+          <folding>
+            <element signature="e#0#57#1" expanded="true" />
+            <element signature="e#59#77#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/examples/maze/run_maze.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="672">
@@ -823,8 +841,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/examples/maze/maze_env.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        <state relative-caret-position="171">
+          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
           <folding>
             <element signature="e#0#75#1" expanded="true" />
             <element signature="e#76#94#0" expanded="true" />
@@ -832,17 +850,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/examples/maze/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/examples/maze/run_maze_transfer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1273">
-          <caret line="353" column="48" selection-start-line="353" selection-start-column="48" selection-end-line="353" selection-end-column="48" />
+        <state relative-caret-position="233">
+          <caret line="404" lean-forward="true" selection-start-line="404" selection-end-line="404" />
           <folding>
             <element signature="e#0#52#1" expanded="true" />
             <element signature="e#54#101#0" expanded="true" />
