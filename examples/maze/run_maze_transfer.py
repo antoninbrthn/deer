@@ -346,7 +346,7 @@ if __name__ == "__main__":
     if transfer_noise == False:
         agent._dataset._observations[0]._data = -old_observations
     else:
-        agent._dataset._observations[0]._data = noise(old_observations)
+        agent._dataset._observations[0]._data = efficient_noise(old_observations)
     # AB : Change to old_observations + noise, maybe the same as for transfer_noise ?
 
     # During training epochs, we want to train the agent after every [parameters.update_frequency] action it takes.
